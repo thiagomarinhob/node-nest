@@ -45,6 +45,8 @@ model Movement {
   userId      String
   cashierId   String
   Cashier     Cashier  @relation(fields: [cashierId], references: [id])
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
 
   @@map("movements")
 }

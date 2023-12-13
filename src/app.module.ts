@@ -7,6 +7,7 @@ import { AuthenticateController } from "./controllers/authenticate.controller";
 import { AuthModule } from "./auth/auth.module";
 import { CreateCashierController } from "./controllers/create-cashier.controller";
 import { CreateMovementController } from './controllers/create-movement.controller';
+import { ListMovementController } from "./controllers/list-movement.controller";
 
 @Module({
   imports: [
@@ -16,7 +17,7 @@ import { CreateMovementController } from './controllers/create-movement.controll
     }),
     AuthModule
   ],
-  controllers: [CreateAccountController, AuthenticateController, CreateCashierController, CreateMovementController],
+  controllers: [CreateAccountController, AuthenticateController, CreateCashierController, CreateMovementController, ListMovementController],
   providers: [PrismaService],
 })
 export class AppModule {}

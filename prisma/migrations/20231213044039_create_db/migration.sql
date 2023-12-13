@@ -30,6 +30,8 @@ CREATE TABLE "movements" (
     "date" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "userId" TEXT NOT NULL,
     "cashierId" TEXT NOT NULL,
+    "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updated_at" TIMESTAMP(3) NOT NULL,
 
     CONSTRAINT "movements_pkey" PRIMARY KEY ("id")
 );
