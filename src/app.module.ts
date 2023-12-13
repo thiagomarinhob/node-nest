@@ -5,7 +5,8 @@ import { CreateAccountController } from "./controllers/create-accoount.controlle
 import { envSchema } from "./env";
 import { AuthenticateController } from "./controllers/authenticate.controller";
 import { AuthModule } from "./auth/auth.module";
-import { CreateQuestionController } from "./controllers/create-question.controller";
+import { CreateCashierController } from "./controllers/create-cashier.controller";
+import { CreateMovementController } from './controllers/create-movement.controller';
 
 @Module({
   imports: [
@@ -15,7 +16,7 @@ import { CreateQuestionController } from "./controllers/create-question.controll
     }),
     AuthModule
   ],
-  controllers: [CreateAccountController, AuthenticateController, CreateQuestionController],
+  controllers: [CreateAccountController, AuthenticateController, CreateCashierController, CreateMovementController],
   providers: [PrismaService],
 })
 export class AppModule {}
